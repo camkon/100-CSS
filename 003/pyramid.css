@@ -1,0 +1,154 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+body .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+  width: 25rem;
+  background-color: black;
+  border-radius: 0.5rem;
+}
+
+body .wrapper .box {
+  height: 13rem;
+  width: 13rem;
+  background-color: #2eb3ff;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0;
+  animation-name: dark;
+  animation-duration: 4.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes dark {
+  40% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.static {
+  position: relative;
+}
+
+.static span {
+  position: absolute;
+}
+
+.static #sun {
+  top: 1rem;
+  left: 5.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: yellow;
+  border-radius: 50%;
+  transform-origin: 1rem 10rem;
+  transform: rotate(-70deg);
+  animation-name: sun;
+  animation-duration: 4.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes sun {
+  40% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(70deg);
+  }
+}
+
+.static #pyrShade {
+  top: 4.5rem;
+  left: 2.5rem;
+  border-left: 4rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-bottom: 4rem solid white;
+  animation-name: shade;
+  animation-duration: 4.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes shade {
+  50% {
+    border-bottom-color: white;
+  }
+  90% {
+    border-bottom-color: #b6b6b6;
+  }
+  100% {
+    border-bottom-color: white;
+  }
+}
+
+.static #pyrLight {
+  top: 4.5rem;
+  left: 6.5rem;
+  border-left: 0rem solid transparent;
+  border-right: 4rem solid transparent;
+  border-bottom: 4rem solid #b6b6b6;
+  animation-name: light;
+  animation-duration: 4.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes light {
+  50% {
+    border-bottom-color: #b6b6b6;
+  }
+  90% {
+    border-bottom-color: white;
+  }
+  100% {
+    border-bottom-color: #b6b6b6;
+  }
+}
+
+.static #floor {
+  bottom: 0;
+  height: 4.5rem;
+  width: 13rem;
+  background-color: #ffcf4b;
+}
+
+.static #floorShade {
+  top: 8.5rem;
+  left: 2.5rem;
+  border-style: solid;
+  border-color: grey transparent transparent transparent;
+  border-width: 0.1rem 0rem 0.2rem 8rem;
+  animation-name: floorShadow;
+  animation-duration: 4.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes floorShadow {
+  10% {
+    border-width: 0.5rem 0.1rem 4rem 8rem;
+  }
+  40% {
+    border-width: 1rem 1rem 2rem 7rem;
+  }
+  100% {
+    border-width: 0.5rem 8rem 2rem 0.5rem;
+  }
+}
