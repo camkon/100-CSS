@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="graph.css">
+  <title>Graph one</title>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div id="box">
+      
+      <div id="top">
+        <div id="topLeft">
+          <span>WEEKLY REPORT</span> <br>
+          <span>0.1 Feb - 07. Feb</span>
+        </div>
+        <div id="topRight">
+          <span>Revenue</span>
+          <span>$3621.79</span>
+        </div>
+      </div>
+
+      <div id="bottom">
+        <div class="grids">
+          <span class="topData">View</span>
+          <span class="topData">Purchases</span>
+        </div>
+
+        <div class="grids">
+          <svg id="svg" width="263" height="69" viewBox="0 0 263 69" fill="none" xmlns="http://www.w3.org/2000/svg" xlink:href="http://www.w3.org/1999/xlink">
+          
+            <marker id="redDot" viewBox="-4 -4 10 10" markerHeight="4" markerWidth="4">
+              <circle cx="0" cy="0" r="4" fill="rgb(255,89,89)">
+            </marker>
+            <marker id="blueDot" viewBox="-4 -4 10 10" markerHeight="4" markerWidth="4">
+              <circle cx="0" cy="0" r="4" fill="rgb(89,89,255)">
+            </marker>
+
+            <polyline 
+              points="15,40 55,5 95,20 140,5 175,30 210,40 250,15" 
+              style="stroke: rgb(255, 89, 89);stroke-width:2px"
+              marker-start="url('#redDot')"
+              marker-mid="url('#redDot')"
+              marker-end="url('#redDot')"/>
+
+            <polyline 
+              points="15,55 55,45 95,60 140,50 175,53 210,65 250,55" 
+              style="stroke: rgb(89, 89, 255);stroke-width:2px"
+              marker-start="url('#blueDot')"
+              marker-mid="url('#blueDot')"
+              marker-end="url('#blueDot')"/>
+          
+          </svg>
+        </div>
+
+        <div class="grids"></div>
+
+        <div class="grids">
+          <span class="week">MON</span>
+          <span class="week">TUE</span>
+          <span class="week">WED</span>
+          <span class="week">THU</span>
+          <span class="week">FRI</span>
+          <span class="week">SAT</span>
+          <span class="week">SUN</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
